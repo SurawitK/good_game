@@ -1,27 +1,71 @@
 <script setup lang="ts">
-	const links = [
-		{
-			label: 'Good Game',
-			to: '/',
-		},
+// const links = [
+// 	{
+// 		label: "Good Game",
+// 		to: useLink({ to: "/" }),
+// 	},
 
-		{ label: 'Sign Up', to: '/signup' },
-		{ label: 'Login', to: '/login' },
-	];
+// 	{ label: "Sign Up", to: useLink({ to: "/signup" }) },
+// 	{ label: "Login", to: useLink({ to: "/login" }) },
+// ];
+// const items = ref([
+// 	{ label: "Good Game", to: useLink({ to: "/" }) },
+// 	{ label: "Sign Up", to: useLink({ to: "/signup" }) },
+// 	{ label: "Login", to: useLink({ to: "/login" }) },
+// ]);
 </script>
 
 <!-- <UIcon name="i-heroicons-light-bulb" class="w-5 h-5" /> -->
 
 <template>
 	<header>
-		<div>
+		<!-- <div>
 			<UHorizontalNavigation
 				:links="links"
 				class="border-b border-gray-200 dark:border-gray-800"></UHorizontalNavigation>
 		</div>
 		<UIcon
 			name="i-lucide-globe"
-			class="w-5 h-5" />
+			class="w-5 h-5" /> -->
+		<nav class="flex justify-between gap-4 p-6">
+			<div>
+				<ULink
+					to="/"
+					active-class="text-primary underline underline-offset-8"
+					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+					>Good Game</ULink
+				>
+			</div>
+
+			<div class="flex items-center gap-6">
+				<UIcon
+					v-motion
+					:initial="{ scale: 1 }"
+					:hovered="{ scale: 1.05 }"
+					:tapped="{ scale: 0.95 }"
+					:focused="{ scale: 1.05 }"
+					name="i-lucide-globe"
+					class="w-5 h-5 hover:opacity-50 cursor-pointer"
+					tabindex="1" />
+				<UButton
+					v-motion
+					:initial="{ scale: 1 }"
+					:hovered="{ scale: 1.2 }"
+					:tapped="{ scale: 0.95 }"
+					:focused="{ scale: 1.2 }">
+					Sign Up
+				</UButton>
+				<UButton
+					variant="outline"
+					v-motion
+					:initial="{ scale: 1 }"
+					:hovered="{ scale: 1.2 }"
+					:tapped="{ scale: 0.95 }"
+					:focused="{ scale: 1.2 }"
+					>Login</UButton
+				>
+			</div>
+		</nav>
 
 		<!-- <Placeholder class="h-32 bg-green-10" /> -->
 	</header>
