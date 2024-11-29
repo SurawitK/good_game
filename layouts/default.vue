@@ -31,7 +31,7 @@ const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
 		<nav class="flex justify-between gap-4 p-6">
 			<div>
 				<ULink
-					class=""
+					class="font-custom"
 					to="/"
 					active-class="text-primary underline underline-offset-8"
 					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
@@ -41,7 +41,11 @@ const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
 
 			<div class="flex items-center gap-6">
 				<UDropdown
-					:ui="{ background:'dark:bg-gray-600', item:{active:'dark:bg-gray-400'}, width:'w-36' }"
+					:ui="{
+						background: 'dark:bg-gray-600',
+						item: { active: 'dark:bg-gray-400' },
+						width: 'w-36',
+					}"
 					:items="languages"
 					:popper="{ placement: 'bottom-end' }">
 					<UButton

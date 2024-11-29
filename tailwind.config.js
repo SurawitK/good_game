@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
-  theme: {
-    extend: { fontFamily: {
-      custom: ['Parkinsans'], }},
-  },
-  plugins: [],
-}
-
+	content: [],
+	theme: {
+		extend: {
+			fontFamily: {
+				custom: ["Parkinsans"],
+			},
+		},
+	},
+	plugins: [],
+};
