@@ -2,7 +2,8 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: { fontFamily: {
+      custom: ['Parkinsans'], }},
   },
   plugins: [],
 }
