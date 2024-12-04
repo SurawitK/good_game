@@ -1,41 +1,57 @@
 <script setup lang="ts">
-const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
-/* 	const links = [
-		{
-			label: "Good Game",
-			to: useLink({ to: "/" }),
-		},
+	const links = [];
 
-		{ label: "Sign Up", to: useLink({ to: "/signup" }) },
-		{ label: "Login", to: useLink({ to: "/login" }) },
+	const languages = [
+		[{ label: 'English' }, { label: 'ภาษาไทย' }],
 	];
-	const items = ref([
-		{ label: "Good Game", to: useLink({ to: "/" }) },
-		{ label: "Sign Up", to: useLink({ to: "/signup" }) },
-		{ label: "Login", to: useLink({ to: "/login" }) },
-	]); */
 </script>
 
-<!-- <UIcon name="i-heroicons-light-bulb" class="w-5 h-5" /> -->
-
 <template>
-	<header>
-		<!-- <div>
-			<UHorizontalNavigation
-				:links="links"
-				class="border-b border-gray-200 dark:border-gray-800"></UHorizontalNavigation>
-		</div>
-		<UIcon
-			name="i-lucide-globe"
-			class="w-5 h-5" /> -->
-		<nav class="flex justify-between gap-4 p-6">
-			<div>
-				<ULink
+	<UHeader>
+		<template #logo>
+			<Logo class="w-auto h-6" />
+			<ULink
+				class="font-custom"
+				to="/"
+				active-class="text-primary underline underline-offset-8"
+				inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+				Good Game
+			</ULink>
+		</template>
+
+		<template #right>
+			<ULink
+				class="font-custom"
+				to="/two"
+				active-class="text-primary underline underline-offset-8"
+				inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+				Link 2
+			</ULink>
+			<ULink
+				class="font-custom"
+				to="/three"
+				active-class="text-primary underline underline-offset-8"
+				inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+				Link 3
+			</ULink>
+		</template>
+
+		<!-- <nav class="flex justify-between gap-4 p-6">
+	
+			<div class="flex gap-4 *:p-[20px]">
+				<!-- <ULink
 					class="font-custom"
-					to="/"
+					to="/two"
 					active-class="text-primary underline underline-offset-8"
 					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
-					Good Game
+					Link 2
+				</ULink>
+				<ULink
+					class="font-custom"
+					to="/three"
+					active-class="text-primary underline underline-offset-8"
+					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+					Link 3
 				</ULink>
 			</div>
 
@@ -53,42 +69,26 @@ const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
 						color="white"
 						variant="ghost" />
 				</UDropdown>
-				<!-- <UIcon
-					@click="showSelect = !showSelect"
-					v-motion
-					:initial="{ scale: 1 }"
-					:hovered="{ scale: 1.05 }"
-					:tapped="{ scale: 0.95 }"
-					:focused="{ scale: 1.05 }"
-					name="i-lucide-globe"
-					class="w-5 h-5 hover:opacity-50 cursor-pointer"
-					tabindex="1" /> -->
 
-				<!-- <div class="relative">
-					<p class="fixed absolute top-0 bottom-0"></p>
-				</div> -->
-
+				<!-- Edit more later (แก้สีขอบนอก) 
 				<UButton
+					class="dark:focus:ring-4 dark:focus:ring-offset-4 dark:ring-lime-500"
 					v-motion
 					:initial="{ scale: 1 }"
-					:hovered="{ scale: 1.2 }"
-					:tapped="{ scale: 0.95 }"
-					:focused="{ scale: 1.2 }">
+					:tapped="{ scale: 1.15 }"
+					:hovered="{ scale: 1.1 }">
 					Sign Up
 				</UButton>
 				<UButton
 					variant="outline"
 					v-motion
 					:initial="{ scale: 1 }"
-					:hovered="{ scale: 1.2 }"
-					:tapped="{ scale: 0.95 }"
-					:focused="{ scale: 1.2 }">
+					:hovered="{ scale: 1.1 }"
+					:tapped="{ scale: 1.15 }">
 					Login
 				</UButton>
-			</div>
-		</nav>
-
-		<!-- <Placeholder class="h-32 bg-green-10" /> -->
-	</header>
+			</div> 
+		</nav>  -->
+	</UHeader>
 	<slot />
 </template>
