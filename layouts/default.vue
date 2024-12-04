@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
-/* 	const links = [
+	const languages = [
+		[{ label: 'English' }, { label: 'ภาษาไทย' }],
+	];
+	/* 	const links = [
 		{
 			label: "Good Game",
 			to: useLink({ to: "/" }),
@@ -29,14 +31,28 @@ const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
 			name="i-lucide-globe"
 			class="w-5 h-5" /> -->
 		<nav class="flex justify-between gap-4 p-6">
-			<div>
-				<ULink
+			<div class="flex gap-4">
+				<NuxtLink
 					class="font-custom"
 					to="/"
 					active-class="text-primary underline underline-offset-8"
 					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
 					Good Game
-				</ULink>
+				</NuxtLink>
+				<NuxtLink
+					class="font-custom"
+					to="/"
+					active-class="text-primary underline underline-offset-8"
+					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+					Link 2
+				</NuxtLink>
+				<NuxtLink
+					class="font-custom"
+					to="/"
+					active-class="text-primary underline underline-offset-8"
+					inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+					Link 3
+				</NuxtLink>
 			</div>
 
 			<div class="flex items-center gap-6">
@@ -71,18 +87,16 @@ const languages = [[{ label: "English" }, { label: "ภาษาไทย" }]];
 				<UButton
 					v-motion
 					:initial="{ scale: 1 }"
-					:hovered="{ scale: 1.2 }"
-					:tapped="{ scale: 0.95 }"
-					:focused="{ scale: 1.2 }">
+					:hovered="{ scale: 1.1 }"
+					:tapped="{ scale: 1.15 }">
 					Sign Up
 				</UButton>
 				<UButton
 					variant="outline"
 					v-motion
 					:initial="{ scale: 1 }"
-					:hovered="{ scale: 1.2 }"
-					:tapped="{ scale: 0.95 }"
-					:focused="{ scale: 1.2 }">
+					:hovered="{ scale: 1.1 }"
+					:tapped="{ scale: 1.15 }">
 					Login
 				</UButton>
 			</div>
